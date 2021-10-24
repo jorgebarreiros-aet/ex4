@@ -20,7 +20,7 @@ stage('CheckoutSCM'){
 		echo 'Well done, genius!'
 		}
 	else {
-		throw "Not quite right..." 
+		throw new Exception("Throw to stop pipeline") 
 		}
 	}
 	}
