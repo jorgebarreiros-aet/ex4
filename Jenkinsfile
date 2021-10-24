@@ -1,6 +1,7 @@
 
 node{
 stage('CheckoutSCM'){
+	def resp
     retry(5){
     try{
     timeout(time: 30, unit: 'SECONDS') {
