@@ -16,10 +16,11 @@ stage('CheckoutSCM'){
    }
 	if (resp=='3') {
 		echo 'Well done, genius!'
-		return true
 		}
-	return false
+	else {
+		throw 'Not quite right...' 
+		}
 	}
-   echo 'Gotta go, Einstein, see you around!'
+   echo 'You are truly exceptional!'
    }
 }
