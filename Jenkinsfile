@@ -2,6 +2,7 @@
 node{
 stage('CheckoutSCM'){
 	def resp
+	try{
     retry(5){
     try{
     timeout(time: 30, unit: 'SECONDS') {
@@ -19,9 +20,12 @@ stage('CheckoutSCM'){
 		echo 'Well done, genius!'
 		}
 	else {
-		throw 'Not quite right...' 
+		throw "Not quite right..." 
 		}
 	}
-   echo 'You are truly exceptional!'
+	}
+	catch(exp){
+		echo 'You are truly exceptional!'
+		}
    }
 }
