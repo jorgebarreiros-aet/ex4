@@ -14,7 +14,7 @@ stage('CheckoutSCM'){
    catch(except){
       resp='0';
    }
-	if resp=='3' {
+	if (resp=='3') {
 		echo 'Well done, genius!'
 		return true
 		}
