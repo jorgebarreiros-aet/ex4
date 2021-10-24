@@ -1,9 +1,9 @@
 
 node{
-stage('CheckoutSCM'){
+stage('Math is hard'){
 	def resp
 	try{
-    retry(5){
+    retry(3){
     try{
     timeout(time: 30, unit: 'SECONDS') {
           resp = input message: '1+2=?', 
@@ -20,7 +20,7 @@ stage('CheckoutSCM'){
 		echo 'Well done, genius!'
 		}
 	else {
-		throw new Exception("Throw to stop pipeline") 
+		throw new Exception("Oh boy...") 
 		}
 	}
 	}
